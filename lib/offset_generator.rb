@@ -34,6 +34,3 @@ class OffsetGenerator
   end
 
 end
-
-o = OffsetGenerator.new
-puts o.a_rotation
