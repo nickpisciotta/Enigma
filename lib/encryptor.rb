@@ -50,6 +50,8 @@ class Encryptor
   end
 end
 
+
+
 if __FILE__ == $0
   message = File.read(ARGV[0])
   e = Encryptor.new

@@ -26,11 +26,3 @@ class DateGeneratorTest < Minitest::Test
   end
 
 end
-
-
-# def test_creating_date_generator
-#   sample_date = Date.parse("04-04-2016")
-#   date_last_digits = DateGenerator.new.generate_date(sample_date)
-#   #require 'pry'; binding.pry
-#   assert_equal "3056", date_last_digits
-# end

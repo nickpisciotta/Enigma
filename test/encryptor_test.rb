@@ -46,6 +46,6 @@ class EncyptorTest < Minitest::Test
 
     actual = e.encrypt("assignment", "1234567")
 
-    assert_equal "qdwp0i22r0", actual
+    assert_equal "ohwp0i06r0", actual
   end
 end

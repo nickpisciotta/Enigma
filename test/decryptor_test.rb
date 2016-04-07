@@ -33,7 +33,7 @@ class DecryptorTest < Minitest::Test
     e = Decryptor.new
 
 
-    actual = e.decrypt("qdwp0i22r0", "1234567")
+    actual = e.decrypt("ohwp0i06r0", "1234567")
 
     assert_equal "assignment", actual
   end
