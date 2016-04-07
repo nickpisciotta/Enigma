@@ -11,7 +11,6 @@ class EncyptorTest < Minitest::Test
 
     e.encrypt("message","1234567", "111111")
 
-
     assert_equal "1234567", e.keyword
   end
 

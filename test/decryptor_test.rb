@@ -32,7 +32,6 @@ class DecryptorTest < Minitest::Test
   def test_it_can_decrypt_without_provided_date
     e = Decryptor.new
 
-
     actual = e.decrypt("ohwp0i06r0", "1234567")
 
     assert_equal "assignment", actual
