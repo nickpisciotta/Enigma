@@ -28,7 +28,6 @@ class Encryptor
     date = date || date_generation
     @final_date = date
     og = create_offset(key, date)
-    #binding.pry
     chunk_message = []
     message.downcase!
     message.split("").each_slice(6) {|a| chunk_message << a }
