@@ -46,6 +46,7 @@ class Decryptor
   end
 end
 
+
 if __FILE__ == $0
   encrypted_message = File.read(ARGV[0])
 

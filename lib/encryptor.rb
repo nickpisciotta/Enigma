@@ -50,11 +50,13 @@ class Encryptor
   end
 end
 
+e = Encryptor.new
+puts e.encrypt("assignment", "1234567")
 
-if __FILE__ == $0
-  message = File.read(ARGV[0])
-  e = Encryptor.new
-  encrypted_message = e.encrypt(message.chomp)
-  File.write(ARGV[1], encrypted_message)
-  puts "Created #{ARGV[1]} with the key #{e.keyword}  and date #{e.final_date}"
-end
+# if __FILE__ == $0
+#   message = File.read(ARGV[0])
+#   e = Encryptor.new
+#   encrypted_message = e.encrypt(message.chomp)
+#   File.write(ARGV[1], encrypted_message)
+#   puts "Created #{ARGV[1]} with the key #{e.keyword}  and date #{e.final_date}"
+# end

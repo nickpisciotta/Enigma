@@ -18,7 +18,6 @@ class DecryptorTest < Minitest::Test
 
     actual = e.decrypt(".9,w3i", "1234567", "111111")
 
-    #require 'pry';binding.pry
     assert_equal "thanks", actual
   end
 
@@ -32,6 +31,7 @@ class DecryptorTest < Minitest::Test
 
   def test_it_can_decrypt_without_provided_date
     e = Decryptor.new
+
 
     actual = e.decrypt("qdwp0i22r0", "1234567")
 

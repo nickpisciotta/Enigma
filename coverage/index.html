@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-06T23:04:17-06:00">2016-04-06T23:04:17-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-06T23:37:57-06:00">2016-04-06T23:37:57-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">97.91%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.68
+         5.54
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>12</b> files in total.
-    <b>233</b> relevant lines. 
-    <span class="green"><b>233</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>239</b> relevant lines. 
+    <span class="green"><b>234</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,18 +72,18 @@
       
       <tr>
         <td class="strong"><a href="#addee4af7a59a7895ff49c59ecd7a6a58d263e39" class="src_link" title="lib/decryptor.rb">lib/decryptor.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>60</td>
-        <td>34</td>
-        <td>34</td>
-        <td>0</td>
-        <td>6.4</td>
+        <td class="yellow strong">87.5 %</td>
+        <td>57</td>
+        <td>40</td>
+        <td>35</td>
+        <td>5</td>
+        <td>5.5</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#50114c9541b29738d777d35fabd4621a947a38b4" class="src_link" title="lib/encryptor.rb">lib/encryptor.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>66</td>
+        <td>62</td>
         <td>37</td>
         <td>37</td>
         <td>0</td>
@@ -305,7 +305,7 @@
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">  #   Hash[characters.zip(rotated_characters)]</code>
+          <code class="ruby">  #   @rotated_pairs = Hash[characters.zip(rotated_characters)]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
@@ -495,11 +495,11 @@
         <div class="source_table" id="addee4af7a59a7895ff49c59ecd7a6a58d263e39">
   <div class="header">
     <h3>lib/decryptor.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">87.5 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>40</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -797,19 +797,19 @@
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby"># d = Decryptor.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby"># puts d.decrypt(&quot;qdwp0i22r&quot;, &quot;1234567&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">if __FILE__ == $0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">  encrypted_message = File.read(ARGV[0])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
@@ -818,52 +818,34 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="missed" data-hits="0" data-linenumber="53">
           
           
-          <code class="ruby"># if __FILE__ == $0</code>
+          <code class="ruby">  d = Decryptor.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="missed" data-hits="0" data-linenumber="54">
           
           
-          <code class="ruby">#   encrypted_message = File.read(ARGV[0])</code>
+          <code class="ruby">  decrypted_message = d.decrypt(encrypted_message.chomp, ARGV[2])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby">  File.write(ARGV[1], decrypted_message)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="56">
           
           
-          <code class="ruby">#   d = Decryptor.new</code>
+          <code class="ruby">  puts &quot;Created #{ARGV[1]} with the key #{d.keyword} and date #{d.final_date}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby">#   decrypted_message = d.decrypt(encrypted_message.chomp, ARGV[2])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">#   File.write(ARGV[1], decrypted_message)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">#   puts &quot;Created #{ARGV[1]} with the key #{d.keyword} and date #{d.final_date}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby"># end</code>
+          <code class="ruby">end</code>
         </li>
       
     </ol>
@@ -1187,7 +1169,7 @@
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
@@ -1196,85 +1178,61 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="55">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">c = Encryptor.new</code>
+          <code class="ruby">e = Encryptor.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">puts c.encrypt(&quot;assignment&quot;, &quot;1234567&quot;)</code>
+          <code class="ruby">puts e.encrypt(&quot;assignment&quot;, &quot;1234567&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">#</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"># if __FILE__ == $0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">#   message = File.read(ARGV[0])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">#   e = Encryptor.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">#   encrypted_message = e.encrypt(message.chomp)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">#   File.write(ARGV[1], encrypted_message)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">#   puts &quot;Created #{ARGV[1]} with the key #{e.keyword}  and date #{e.final_date}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby"># end</code>
@@ -2018,88 +1976,88 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">    #require &#39;pry&#39;;binding.pry</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &quot;thanks&quot;, actual</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_it_can_decypt_extended_message</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">    e = Decryptor.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">    actual = e.decrypt(&quot;shrrzd46m2q86g91,kv6m2&quot;, &quot;1234567&quot;, &quot;111111&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &quot;assignment for student&quot;, actual</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_it_can_decrypt_without_provided_date</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">    e = Decryptor.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">

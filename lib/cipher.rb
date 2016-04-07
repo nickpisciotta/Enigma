@@ -15,7 +15,7 @@ class Cipher
   # def rotate_characters_extension(rotation)
   #   characters = ("a".."z").to_a + ("0".."9").to_a + ("A".."Z").to_a + (" .,!@#$%^&*()[]<>;:/?\|").chars
   #   rotated_characters = characters.rotate(rotation)
-  #   Hash[characters.zip(rotated_characters)]
+  #   @rotated_pairs = Hash[characters.zip(rotated_characters)]
   # end
 
 end
